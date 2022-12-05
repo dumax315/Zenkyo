@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" id ="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <button type="submit" id="logInButton">Log In</button>
+    <button id="logInWithGoogle">Log In with Google</button>
+    <button id="logInWithGithub">Log In with Github</button>
+    <div id="error"></div> 
+    <div id="email"></div>
+    <button id="signOutButton">Sign Out</button>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
