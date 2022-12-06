@@ -7,12 +7,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
     <link rel="manifest" href="/fav/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Zenkyo</title>
   </head>
   <body>
     <header>
     <a href="#default" class="logo">Zenkyo <img class="logo" src="/images/logo.png"></a>
-    
+   
     <div class="header-right">
       <a href="../">Home</a>
       <a href="./evidenceTracker.html">Evidence Tracker</a>
@@ -27,7 +28,22 @@
       </div>
       </div>
     </header>
+    <input type="number" id="start" name="start" min="1" value="1"> to <span id="start10">10</span>
+    <button id="refreshPosts">Refresh Posts</button>
     
+    <button id="createPost">+ Create Post</button>
+    
+    <div id="postCreator" style="display: none;">
+      <button id="closePost">X</button>
+      <input type="text" id="postTitle" name="postTitle" placeholder="title">
+      <div>Use markdown to style your posts <a href="https://www.markdownguide.org/basic-syntax/">Learn How</a></div>
+      <textarea id="postBox" name="postBox" placeholder="body"></textarea>
+      <button type="submit" id="postButton">Post</button>
+    </div>
+    <div id="posts">
+      
+    </div>
     <script type="module" src="/main.js"></script>
+    <script type="module" src="/forum.js"></script>
   </body>
 </html>

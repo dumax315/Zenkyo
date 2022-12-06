@@ -1,11 +1,8 @@
-import "./style.css"
 import { createClient } from "@supabase/supabase-js"
 const supabase = createClient('https://eugkwexbdibdyazlxxfz.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV1Z2t3ZXhiZGliZHlhemx4eGZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzAyMDM2MzIsImV4cCI6MTk4NTc3OTYzMn0.zYgF-kvwVFR529mf2z6Ss0wZCUM59tJ99NPc-_OVaq8')
 
 
-const { data: { user } } = await supabase.auth.getUser()
-console.log(user)
-setUser(user)
+
 
 
 supabase.auth.onAuthStateChange((event, session) => {

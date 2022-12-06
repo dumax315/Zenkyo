@@ -1,3 +1,20 @@
 .logo {
   width:16px;
 }
+
+#postCreator {
+  display:none;
+  width: 80vw;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: skyblue;
+}
+
+.post {
+  background:lightcyan;
+  border: 5px solid red;
+}
