@@ -3,18 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://bouncecss.bookie0.repl.co/bounce.css" rel="stylesheet" type="text/css" />
-    <title>Vite App</title>
+<!--     <link href="https://bouncecss.bookie0.repl.co/bounce.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="manifest" href="/fav/site.webmanifest">
+    <title>Zenkyo</title>
   </head>
   <body>
-    <div id="app">
-      here is the main page
-      
-    </div>
-    <a href="/signup.html">go to the sign up page</a>
-    <a href="/login.html">go to the log in page</a>
-    <div id="email"></div>
-    <button id="signOutButton">Sign Out</button>
+    <header>
+    <a href="#default" class="logo">Zenkyo <img class="logo" src="/images/logo.png"></a>
+    
+    <div class="header-right">
+      <a class="active" href="">Home</a>
+      <a href="./evidenceTracker.html">Evidence Tracker</a>
+      <a href="./Forum.html">Forum</a>
+      <span id="notSignedin">
+        <a href="/signup.html">go to the sign up page</a>
+        <a href="/login.html">go to the log in page</a>
+      </span>
+      <div id="signedin" style="display:none">
+        Loged In As: <span id="email"></span>
+        <button id="signOutButton" >Sign Out</button>
+      </div>
+      </div>
+    </header>
+    
     <script type="module" src="/main.js"></script>
   </body>
 </html>
