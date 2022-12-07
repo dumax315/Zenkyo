@@ -26,30 +26,32 @@
           <a href="/login.html">go to the log in page</a>
         </span>
         <div id="signedin" style="display:none">
-          <a href="./evidenceTracker.html">Case Maker</a>
-          <a class="active" href="./Forum.html">Forum</a>
+          <a class="active" href="./evidenceTracker.html">Case Maker</a>
+          <a href="./Forum.html">Forum</a>
           <a href="./Resources.html">Resources</a>
           Loged In As: <span id="email"></span>
           <button id="signOutButton" >Sign Out</button>
         </div>
       </div>
     </header>
-    <input type="number" id="start" name="start" min="1" value="1"> to <span id="start10">10</span>
-    <button id="refreshPosts">Refresh Posts</button>
     
-    <button id="createPost">+ Create Post</button>
     
-    <div id="postCreator" style="display: none;">
+    
+    
+    <div id="caseCreator" style="display: none;">
       <button id="closePost">X</button>
       <input type="text" id="postTitle" name="postTitle" placeholder="title">
       <div>Use markdown to style your posts <a href="https://www.markdownguide.org/basic-syntax/">Learn How</a></div>
       <textarea id="postBox" name="postBox" placeholder="body"></textarea>
       <button type="submit" id="postButton">Post</button>
     </div>
-    <div id="posts">
-      
+    <div id="cases">
+      <button id="createCase">+ Create New Case</button>
+    </div>
+    <div id="case">
+      <button id="refreshCase">Refresh Case</button>
     </div>
     <script type="module" src="/main.js"></script>
-    <script type="module" src="/forum.js"></script>
+    <script type="module" src="/evidenceTracker.js"></script>
   </body>
 </html>
