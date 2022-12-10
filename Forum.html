@@ -3,42 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
     <link rel="manifest" href="/fav/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="forum.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
     <title>Zenkyo</title>
   </head>
+  
   <body>
     <header>
-      <a href="#default" class="logo">Zenkyo <img class="logo" src="/images/logo.png"></a>
-      
-      <div class="header-right">
-        <a  href="">Home</a>
         
-        <span id="notSignedin">
-          <a href="##">About</a>
-          <a href="##">Mobile Support</a>
-          <a href="##">Our Mission</a>
-          <a href="##">Contact Us</a>
-          <a href="/signup.html">go to the sign up page</a>
-          <a href="/login.html">go to the log in page</a>
-        </span>
-        <div id="signedin" style="display:none">
-          <a href="./evidenceTracker.html">Case Maker</a>
-          <a class="active" href="./Forum.html">Forum</a>
-          <a href="./Resources.html">Resources</a>
-          Loged In As: <span id="email"></span>
-          <button id="signOutButton" >Sign Out</button>
-        </div>
-      </div>
-    </header>
-    <input type="number" id="start" name="start" min="1" value="1"> to <span id="start10">10</span>
+        
+        <nav>
+          <a href="./" class="logo">ZENKY <img class="logo" src="/images/logo.png"></a>
+          <a  href="./">Home</a>
+          
+          <span class="nav" id="notSignedin">
+<!--             <a href="##">About</a>
+            <a href="##">Mobile Support</a>
+            <a href="##">Our Mission</a>
+            <a href="##">Contact Us</a> -->
+            <a href="/signup.html">sign up</a>
+            <a href="/login.html">log in</a>
+          </span>
+          <div id="signedin" style="display:none">
+            <a  href="./evidenceTracker.html">Case Maker</a>
+            <a class="active" href="./Forum.html">Forum</a>
+            <a href="./Resources.html">Resources</a>
+            <span id="email"></span>
+            
+          </div>
+            <button id="signOutButton" >Sign Out</button>
+
+        </nav>
+      </header>
+<div class="main">
+  <div class="top-bar">
+    <label for="start">
+      <input type="number" id="start" name="start" min="1" value="1"> to <span
+          id="start10">10</span>
+    </label>
     <button id="refreshPosts">Refresh Posts</button>
     
     <button id="createPost">+ Create Post</button>
-    
+    <label>
+      <input id="searchBar" class="search-bar" type="text" placeholder="Type here to search...">
+    </label>
+  </div>
     <div id="postCreator" style="display: none;">
       <button id="closePost">X</button>
       <input type="text" id="postTitle" name="postTitle" placeholder="title">
@@ -49,6 +64,7 @@
     <div id="posts">
       
     </div>
+</div>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/forum.js"></script>
   </body>

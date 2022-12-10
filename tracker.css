@@ -1,0 +1,252 @@
+
+.display-flex {
+  display:flex;
+}
+.evidenceSplit {
+  display:flex;
+  justify-content:space-evenly;
+}
+.caseSideBarTitle{
+  display:flex;
+  justify-content:space-between;
+  margin:30px;
+  margin-bottom:0px;
+  margin-top:5em;
+  
+}
+#caseSideBar{
+  width:20%;
+  min-width:300px;
+  background-color:#252539;
+  color:#7D7D93;
+  height:100vh;
+}
+#cases {
+  margin-top:0px;
+  list-style: none;
+  padding:8px;
+}
+nav {
+  margin:0;
+  padding:4px;
+  text-align:left;
+  border-bottom: 1px solid #555282;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+nav a {
+  font-size:16px;
+  
+}
+#active {
+  color:#7364BF;
+}
+#email{
+  display:none;
+}
+
+#signOutButton {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+  position:absolute;
+  right:2em;
+  top:1em;
+  color: #7D7D93;
+}
+.caseItem {
+  background-color:#48486D;
+  padding:8px;
+  margin:8px;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+#mediaContainer {
+  width:40%;
+  padding: 1em;
+  background: #252539;
+  border: 1.2px solid #555282;
+  border-radius: 10px;
+}
+#mediaContainer img {
+  width:100%
+}
+#testimonialCarousel {
+  width:40%;
+}
+.editor-toolbar {
+  background: white;
+}
+
+#caseEditors {
+  margin:0px;
+  list-style: none;
+  padding:8px;
+  display:flex;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.caseEditorsItem {
+  background: #7A7AE0;
+  border-radius: 30px;
+  padding:8px;
+  margin-right:1em;
+}
+.headBar {
+  padding-left: 6%;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+#caseTitle {
+  color: #FFFFFF;
+  font-size: 24px;
+/*   margin-left: 8px; */
+}
+.
+#editorsSplitasdf {
+  display: flex !important;
+}
+
+#addEditors {
+  height: min-content;
+}
+#mediaCarousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#mediaContainer img {
+  margin-bottom:5%;
+  border-radius: 10px;
+  height: min-content;
+}
+/* #mediaCarousel::after {
+  content: "";
+  flex: auto;
+} */
+
+#caseEditorsImages {
+  display: block;
+  position: absolute;
+}
+.caseEditorsImagesItem {
+  transition: left 1s,width 1s;
+  list-style: none;
+  width: 30px;
+  height: 39px;
+  position: relative;
+  left: -30px;
+  top: 35px;
+  margin-bottom: 1em;
+  border-radius: 5px 0px 0px 5px;
+}
+.caseEditorsImagesItemActive {
+  list-style: none;
+  width: 30px;
+  height: 39px;
+  position: relative;
+  left: -30px;
+  top: 35px;
+  margin-bottom: 1em;
+  border-radius: 5px 0px 0px 5px;
+  left: -40px;
+  width: 40px;
+}
+
+.testimonialCarouselItem {
+  background: #252539;
+  border: 1.2px solid #555282;
+  border-radius: 10px;
+  padding: 10px;
+  display:none;
+  color: white;
+}
+.testimonialCarouselItemActive{
+  display:block;
+}
+#addEditors {
+  width: 44px;
+}
+#createCase {
+  height: 20px;
+}
+.mainTr{
+  width:100%
+}
+#currentCase {
+  width: 100%;
+}
+.caseEditHeader {
+  background: #252539;
+  border-radius: 30px;
+  padding: 0px;
+  color: white;
+  padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.caseEditHeaderContain {
+  display: flex;
+  margin: .5em;
+  width: max-content;
+}
+.caseActive {
+  background-color:#1E1E1E;
+}
+.caseItem:hover {
+  background-color: #363655;
+}
+.caseEditorsImagesItem:hover {
+  left: -35px;
+  width: 35px;
+}
+.caseEditHeaderContain:hover .caseEditHeader {
+  background: #363655;
+}
+@media screen and (min-width: 900px) {
+  #mediaContainer img {
+    width:48%;
+    
+  }
+
+  
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    display:block;
+  }
+  .evidenceSplit{
+    display:block;
+  }
+  #caseSideBar {
+  width: 100vw;
+    max-height: 160px;
+    overflow: scroll;
+  }
+  #mediaContainer {
+    width: 81%;
+    
+  }
+  #testimonialCarousel {
+    width:90%;
+    
+  }
+  .caseEditorsImagesItem{
+    left:0;
+    border-radius:5px;
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up</title>
+</head>
+<body id="body">
+<div id="root">
+    <!-- Taskbar -->
+    <header>
+        <img id="logo" src="/imgs/logo.png">
+        <nav>
+
+            <div class="nav" id="notSignedin">
+                <a class="home" href="#">Home</a>
+                <a class="features" href="#">Features</a>
+                <a class="mobile-support" href="#">Mobile Support</a>
+                <a class="our-mission" href="#">Our Mission</a>
+                <a class="contact" href="#">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <div class="main">
+
+        <!-- image -->
+        <!--<div class="image">
+            <iframe src='https://my.spline.design/untitled-5cdad7cf90553afc195cfa522fdf141c/' frameborder='0' width='120px' height='120px'></iframe>
+        </div> -->
+
+
+        <!-- Sign up menu -->
+        <div class="signup-menu">
+            <div class="container">
+                <h2>Sign Up</h2>
+                <div id="app"></div>
+                <div class="info">
+                    <label for="uname">Username</label><br>
+                    <input type="text" id="uname" name="uname" required><br>
+                </div>
+                <div class="info">
+                    <label for="psw">Password</label><br>
+                    <input type="password" id="psw" name="psw" required><br>
+                </div>
+
+                <div class="buttons">
+                    <button class="signup-btn" type="submit" id="signUpButton">Sign Up</button>
+
+                    <br>
+                    <div class="alt-signup">
+                        <button class="btn" id="logInWithGoogle">Sign up with Google</button>
+                        <button class="btn" id="logInWithGithub">Sign up with Github</button>
+
+                    </div>
+
+                </div>
+
+                <br>
+                <hr>
+
+                <!-- Use later on for error handling -->
+                <div id="error"></div>
+                <div id="email"></div>
+
+                <!-- Option to go to signup page -->
+                <h5>Already have an account?</h5>
+
+                <button class="login-btn" type="submit" name="signup" value="Signup">Log In</button>
+
+                <script type="module" src="/login.js"></script>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

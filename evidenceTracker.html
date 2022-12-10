@@ -8,48 +8,102 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
     <link rel="manifest" href="/fav/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" type="text/css" href="tracker.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
     <title>Zenkyo</title>
   </head>
   <body>
-    <header>
-      <a href="#default" class="logo">Zenkyo <img class="logo" src="/images/logo.png"></a>
-      
-      <div class="header-right">
-        <a  href="">Home</a>
-        
-        <span id="notSignedin">
-          <a href="##">About</a>
-          <a href="##">Mobile Support</a>
-          <a href="##">Our Mission</a>
-          <a href="##">Contact Us</a>
-          <a href="/signup.html">go to the sign up page</a>
-          <a href="/login.html">go to the log in page</a>
-        </span>
-        <div id="signedin" style="display:none">
-          <a class="active" href="./evidenceTracker.html">Case Maker</a>
-          <a href="./Forum.html">Forum</a>
-          <a href="./Resources.html">Resources</a>
-          Loged In As: <span id="email"></span>
-          <button id="signOutButton" >Sign Out</button>
+    <div id="caseSideBar">
+      <div class="caseSideBarTitle">
+        <div>
+          CASES
         </div>
+        <img src="./images/addBut.png" title="Create New Case" id="createCase">
       </div>
-    </header>
-    
-    
-    
-    
-    <div id="caseCreator" style="display: none;">
+      <ul id="cases">
+        
+      </ul>
+      <div id="caseCreator" style="display: none;">
       <button id="closePost">X</button>
       <input type="text" id="postTitle" name="postTitle" placeholder="title">
-      <div>Use markdown to style your posts <a href="https://www.markdownguide.org/basic-syntax/">Learn How</a></div>
-      <textarea id="postBox" name="postBox" placeholder="body"></textarea>
-      <button type="submit" id="postButton">Post</button>
+      <button type="submit" id="postButton">Create Case</button>
     </div>
-    <div id="cases">
-      <button id="createCase">+ Create New Case</button>
     </div>
-    <div id="case">
-      <button id="refreshCase">Refresh Case</button>
+    <div class="mainTr">
+      <header>
+        
+        
+        <nav>
+          <a href="./" class="logo">ZENKY <img class="logo" src="/images/logo.png"></a>
+          <a  href="./">Home</a>
+          
+          <span class="nav" id="notSignedin">
+<!--             <a href="##">About</a>
+            <a href="##">Mobile Support</a>
+            <a href="##">Our Mission</a>
+            <a href="##">Contact Us</a> -->
+            <a href="/signup.html">sign up</a>
+            <a href="/login.html">log in</a>
+          </span>
+          <div id="signedin" style="display:none">
+            <a class="active" href="./evidenceTracker.html">Case Maker</a>
+            <a href="./Forum.html">Forum</a>
+            <a href="./Resources.html">Resources</a>
+            <span id="email"></span>
+            
+          </div>
+            <button id="signOutButton" >Sign Out</button>
+
+        </nav>
+      </header>
+      
+      <div class="display-flex">
+        <div id="currentCase">
+<!--           <button id="refreshCase">Refresh Case</button> -->
+    <!--       <img id="casePfp">
+          <input type="file" id="casePfpUploadInput" name="filename">
+          <button id="casePfpUpload">Upload</button> -->
+          <div class="headBar">
+            <div id="caseTitle"></div>
+            <div class="caseEditHeaderContain" id="dateDivToClick">
+              <div class="caseEditHeader" >
+                <img class="editIcon" src="./images/calendar.svg">
+                <span id="caseDate"></span>
+              </div>
+              <img class="editIcon" src="./images/edit.svg">
+            </div>
+            <div class="caseEditHeaderContain" id="locDivToClick">
+              <div class="caseEditHeader" >
+                <img class="editIcon" src="./images/location.svg">
+                <span id="caseLocation"></span>
+              </div>
+              <img class="editIcon" src="./images/edit.svg">
+            </div>
+            <div id="editorsSplitasdf" style="display: flex;">
+              <ul id="caseEditors"></ul>
+              <img id="addEditors" class="logo" src="/images/person.png">
+            </div>
+          </div>
+          <div class="evidenceSplit">
+  
+            <div id="mediaContainer">
+              <div id="mediaCarousel">
+                
+              </div>
+              <input type="file" id="caseMediaUploadInput" name="filename"  accept="image/*">
+              <button id="caseMediaUpload">Upload Media</button>
+            </div>
+            <div id="testimonialCarousel">
+              <div id="caseEditorsImages"></div>
+              <div id="caseEditorsTestimonial"></div>
+              <button id="testimonialUpdate">Save testimonial</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/evidenceTracker.js"></script>

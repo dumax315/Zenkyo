@@ -3,7 +3,6 @@ import DOMPurify from 'isomorphic-dompurify';
 import { createClient } from "@supabase/supabase-js"
 const supabase = createClient('https://eugkwexbdibdyazlxxfz.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV1Z2t3ZXhiZGliZHlhemx4eGZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzAyMDM2MzIsImV4cCI6MTk4NTc3OTYzMn0.zYgF-kvwVFR529mf2z6Ss0wZCUM59tJ99NPc-_OVaq8')
 
-
 async function reply(id) {
   const { data: { user } } = await supabase.auth.getUser()
   if(user == null) {
@@ -47,24 +46,26 @@ async function loadPosts() {
   forum.forEach(element => {
     const containerDiv = document.createElement("div");
     containerDiv.className += "post"
-    let title = document.createElement("p")
+    let title = document.createElement("h2")
     title.innerText = element.title
     containerDiv.appendChild(title);
     
-    let poster = document.createElement("p")
-    poster.innerText = element.email
+    let poster = document.createElement("h4")
+    poster.innerText = element.email + ":"
     containerDiv.appendChild(poster);
 
     let body = document.createElement("p")
     body.innerHTML = DOMPurify.sanitize(marked.parse(element.body))
     containerDiv.appendChild(body)
-
+    let line = document.createElement("hr")
+    containerDiv.appendChild(line)
     let comments = document.createElement("div")
     let numOfComments = document.createElement("p")
     numOfComments.innerText = element.replys.comments.length + " comments"
     comments.appendChild(numOfComments)
 
     let commentList = document.createElement("ul")
+    commentList.className += " comments"
     // i < 3 && 
     for (let i = 0;i < element.replys.comments.length; i++){
       commentList.innerHTML += "<li>" + DOMPurify.sanitize(element.replys.comments[i].body) + "<span class='commentPoster'> sent by: "+element.replys.comments[i].email+"</span></li>"
@@ -72,7 +73,7 @@ async function loadPosts() {
 
     
     comments.appendChild(commentList)
-    comments.innerHTML += "<input class='replyInput' type='text' postid='"+element.id+"'></input><button type='submit' class='replySubmitButtons' postid='"+element.id+"'>add comment</button"
+    comments.innerHTML += "<label><input class='replyInput' type='text' postid='"+element.id+"'></input></label><button type='submit' class='replySubmitButtons' postid='"+element.id+"'>Reply</button"
     
     containerDiv.appendChild(comments)
     
@@ -97,7 +98,7 @@ async function post() {
     return;
   }
   let title = document.getElementById("postTitle").value
-  let body = document.getElementById("postBox").value
+  let body = simplemde.value();
   console.log({ email: user.email, title: title,body:body, replys: {comments:{}} })
   const { data, error } = await supabase
     .from('forum')
@@ -120,6 +121,8 @@ function updateStart10() {
   let start = parseInt(document.getElementById("start").value);
   document.getElementById("start10").innerText = start+9
 }
+
+let simplemde = new SimpleMDE({ element: document.getElementById("postBox") });
 
 document.getElementById("postButton").addEventListener('click', post);
 document.getElementById("refreshPosts").addEventListener('click', loadPosts);

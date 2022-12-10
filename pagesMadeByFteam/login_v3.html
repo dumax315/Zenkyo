@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="manifest" href="/fav/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Log In</title>
+</head>
+<body id="body">
+<div id="root">
+    <!-- Taskbar -->
+    <header>
+      <a href="#default" class="logo">Zenkyo <img class="logo" src="/images/logo.png"></a>
+      
+      <div class="header-right">
+        <a  href="">Home</a>
+        
+        <span class="nav" id="notSignedin">
+          <a href="##">About</a>
+          <a href="##">Mobile Support</a>
+          <a href="##">Our Mission</a>
+          <a href="##">Contact Us</a>
+          <a href="/signup.html">go to the sign up page</a>
+          <a href="/login.html">go to the log in page</a>
+        </span>
+        <div class="nav" id="signedin" style="display:none">
+          <a class="active" href="./evidenceTracker.html">Case Maker</a>
+          <a href="./Forum.html">Forum</a>
+          <a href="./Resources.html">Resources</a>
+          Loged In As: <span id="email"></span>
+          <button id="signOutButton" >Sign Out</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Body -->
+    <div class="main">
+
+        <!-- image -->
+        <!--<div class="image">
+            <iframe src='https://my.spline.design/untitled-5cdad7cf90553afc195cfa522fdf141c/' frameborder='0' width='120px' height='120px'></iframe>
+        </div> -->
+
+
+        <!-- Login menu -->
+        <div class="login-menu">
+            <div class="container">
+                <h2>Log In</h2>
+                <div id="app"></div>
+                <div class="info">
+                    <label for="uname">Username</label><br>
+                    <input type="text" id="uname" name="uname" required><br>
+                </div>
+                <div class="info">
+                    <label for="psw">Password</label><br>
+                    <input type="password" id="psw" name="psw" required><br>
+                </div>
+
+                <div class="buttons">
+                    <button class="login-btn" type="submit" id="logInButton">Log In</button>
+
+                    <br>
+                    <div class="alt-login">
+                        <button class="btn" id="logInWithGoogle">Log In with Google</button>
+                        <button class="btn" id="logInWithGithub">Log In with Github</button>
+
+                    </div>
+
+                </div>
+
+                <br>
+                <hr>
+
+                <!-- Use later on for error handling -->
+                <div id="error"></div>
+                <div id="email"></div>
+
+                <!-- Option to go to signup page -->
+                <h5>No account? Sign up for free.</h5>
+
+                <button class="signup-btn" type="submit" name="signup" value="Signup">Sign up</button>
+
+
+                <script type="module" src="/login.js"></script>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

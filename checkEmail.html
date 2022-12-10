@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="manifest" href="/fav/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Sign Up</title>
+</head>
+<body id="body">
+<div id="root">
+    <!-- Taskbar -->
+    <header>
+      
+      
+      <nav>
+        <a href="#default" class="logo">ZENKY <img class="logo" src="/images/logo.png"></a>
+        <a  href="">Home</a>
+        
+        <span class="nav" id="notSignedin">
+          <a href="##">About</a>
+          <a href="##">Mobile Support</a>
+          <a href="##">Our Mission</a>
+          <a href="##">Contact Us</a>
+          <a href="/signup.html">sign up</a>
+        </span>
+        <div id="signedin" style="display:none">
+          <a class="active" href="./evidenceTracker.html">Case Maker</a>
+          <a href="./Forum.html">Forum</a>
+          <a href="./Resources.html">Resources</a>
+          Loged In As: <span id="email"></span>
+          <button id="signOutButton" >Sign Out</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Body -->
+    <div class="main">
+
+
+
+        <!-- Login menu -->
+        <div class="login-menu">
+            <h3 class="checkEmail">Please check your email for a confirmation</h3>
+          <h5>Then Log In</h5>
+
+                <button style="width: 100%;" onclick="location.href='/login.html'" class="signup-btn" type="submit" name="signup" value="Signup">Log In</button>
+
+                <script type="module" src="/login.js"></script>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

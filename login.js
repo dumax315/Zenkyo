@@ -34,6 +34,10 @@ async function handleSignUp() {
     email: email,
     password: pass
   });
+
+  if (error == null){
+    location.href='/checkEmail.html'
+  }
 }
 
 async function handleLogIn() {

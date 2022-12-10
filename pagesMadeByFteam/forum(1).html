@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="manifest" href="/fav/site.webmanifest">
+    <!-- <link rel="stylesheet" type="text/css" href="login.css"> -->
+    <link rel="stylesheet" type="text/css" href="forum.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <title>Zenkyo</title>
+</head>
+<body>
+<header>
+
+
+    <nav>
+        <a href="#default" class="logo">ZENKY <img class="logo" src="/images/logo.png"></a>
+        <a href="">Home</a>
+
+        <span class="nav" id="notSignedin">
+                <a href="#">About</a>
+                <a href="#">Mobile Support</a>
+                <a href="#">Our Mission</a>
+                <a href="#">Contact Us</a>
+                <a href="/signup.html">sign up</a>
+            </span>
+        <div id="signedin" style="display:none">
+            <a class="active" href="./evidenceTracker.html">Evidence Tracker</a>
+            <a href="./Resources.html">Resources</a>
+            <a href="./Forum.html">Forums</a>
+            <span id="email"></span>
+
+            <button id="signOutButton">Sign Out</button>
+
+        </div>
+
+
+    </nav>
+</header>
+
+<div class="main">
+    <div class="top-bar">
+        <label for="start">
+            <input type="number" id="start" name="start" min="1" value="1"> to <span
+                id="start10">10</span>
+        </label>
+
+        <button id="refreshPosts">Refresh Posts</button>
+        <button id="createPost">Create Post</button>
+
+        <label>
+            <input id="searchBar" class="search-bar" type="text" placeholder="Type here to search...">
+        </label>
+    </div>
+
+    <div class="post-creator">
+        <div id="postCreator" style="display: none;">
+            <button id="closePost">X</button>
+            <label for="postTitle"></label><input type="text" id="postTitle" name="postTitle" placeholder="Title">
+            <div>Use markdown to style your posts <a href="https://www.markdownguide.org/basic-syntax/">Learn How</a>
+            </div>
+            <label for="postBox"></label><textarea id="postBox" name="postBox" placeholder="body"
+                                                   style="display: none;"></textarea>
+            <div class="editor-toolbar"><a title="Bold (Ctrl-B)" tabindex="-1" class="fa fa-bold"></a><a
+                    title="Italic (Ctrl-I)"
+                    tabindex="-1"
+                    class="fa fa-italic"></a><a
+                    title="Heading (Ctrl-H)" tabindex="-1" class="fa fa-header"></a><i class="separator">|</i><a
+                    title="Quote (Ctrl-')" tabindex="-1" class="fa fa-quote-left"></a><a title="Generic List (Ctrl-L)"
+                                                                                         tabindex="-1"
+                                                                                         class="fa fa-list-ul"></a><a
+                    title="Numbered List (Ctrl-Alt-L)" tabindex="-1" class="fa fa-list-ol"></a><i
+                    class="separator">|</i><a
+                    title="Create Link (Ctrl-K)" tabindex="-1" class="fa fa-link"></a><a
+                    title="Insert Image (Ctrl-Alt-I)"
+                    tabindex="-1"
+                    class="fa fa-picture-o"></a><i
+                    class="separator">|</i><a title="Toggle Preview (Ctrl-P)" tabindex="-1"
+                                              class="fa fa-eye no-disable"></a><a
+                    title="Toggle Side by Side (F9)" tabindex="-1" class="fa fa-columns no-disable no-mobile"></a><a
+                    title="Toggle Fullscreen (F11)" tabindex="-1" class="fa fa-arrows-alt no-disable no-mobile"></a><i
+                    class="separator">|</i><a title="Markdown Guide" tabindex="-1" class="fa fa-question-circle"
+                                              href="https://simplemde.com/markdown-guide" target="_blank"></a></div>
+            <div class="CodeMirror cm-s-paper CodeMirror-wrap CodeMirror-empty">
+                <div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea
+                        style="position: absolute; padding: 0px; width: 1px; height: 1em; outline: none;"
+                        autocorrect="off"
+                        autocapitalize="none" spellcheck="false" tabindex="0" wrap="off"></textarea></div>
+                <div class="CodeMirror-vscrollbar" cm-not-content="true">
+                    <div style="min-width: 1px;"></div>
+                </div>
+                <div class="CodeMirror-hscrollbar" cm-not-content="true">
+                    <div style="height: 100%; min-height: 1px;"></div>
+                </div>
+                <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                <div class="CodeMirror-scroll" tabindex="-1" draggable="true">
+                    <div class="CodeMirror-sizer" style="margin-left: 0px;">
+                        <div style="position: relative;">
+                            <div class="CodeMirror-lines">
+                                <div style="position: relative; outline: none;">
+                                    <pre style="height: 0px; overflow: visible;"
+                                         class="CodeMirror-placeholder">body</pre>
+                                    <div class="CodeMirror-measure">
+                                        <pre><span>xxxxxxxxxx</span></pre>
+                                    </div>
+                                    <div class="CodeMirror-measure"></div>
+                                    <div style="position: relative; z-index: 1;"></div>
+                                    <div class="CodeMirror-cursors"></div>
+                                    <div class="CodeMirror-code"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="position: absolute; height: 30px; width: 1px;"></div>
+                    <div class="CodeMirror-gutters" style="display: none;"></div>
+                </div>
+            </div>
+            <div class="editor-preview-side"></div>
+            <div class="editor-statusbar"><span class="autosave"></span><span class="lines">1</span><span
+                    class="words">0</span><span
+                    class="cursor">0:0</span></div>
+            <button type="submit" id="postButton">Post</button>
+        </div>
+    </div>
+
+
+    <div id="posts" class="posts">
+
+        <!-- Make sure to format each post based on this block -->
+        <div class="post">
+            <h2>title</h2>
+            <h4 class="email">theomhalpern@gmail.com</h4>
+            <p>
+                This is where actual text goes
+            </p>
+            <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg">
+            <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg">
+            <div>
+                <hr>
+                <p>0 comments</p>
+                <ul class="comments">
+                    <li>test<span class="commentPoster"> sent by: theomhalpern@gmail.com</span></li>
+                    <li>plese<span class="commentPoster"> sent by: theomhalpern@gmail.com</span></li>
+                    <li>yy<span class="commentPoster"> sent by: theomhalpern@gmail.com</span></li>
+                    <li>asdf<span class="commentPoster"> sent by: theomhalpern@gmail.com</span></li>
+                </ul>
+                <label>
+                    <input class="replyInput" type="text" postid="8">
+                </label>
+                <button type="submit" class="replySubmitButtons" postid="8">Reply</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="module" src="/main.js"></script>
+<script type="module" src="/forum.js"></script>
+
+<script src="moz-extension://4d85668a-f891-4d54-a163-0d51eff07819/js/app.js" type="text/javascript"></script>
+</body>
+
+</html>

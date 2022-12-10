@@ -1,20 +1,26 @@
+body{
+  font-family: 'Proxima Nova', sans-serif;
+  font-style: normal;
+}
 .logo {
   width:16px;
+  font-weight: bold;
 }
 
-#postCreator {
-  display:none;
-  width: 80vw;
-  position: fixed;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  background: skyblue;
+
+
+
+.iframeThree, #threeloader{
+  width:40vw;
+  height:33vw;
+
+} 
+.iframeThree{
+  visibility: hidden;
+} 
+
+.checkEmail {
+  text-align:center;
+  color:white;
 }
 
-.post {
-  background:lightcyan;
-  border: 5px solid red;
-}

@@ -1,27 +1,104 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
     <link rel="manifest" href="/fav/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Zenkyo</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" id ="uname" required>
+    <link rel="stylesheet" href="login.css">
+    <title>Sign Up</title>
+</head>
+<body id="body">
+<div id="root">
+    <!-- Taskbar -->
+    <header>
+      
+      
+      <nav>
+        <a href="#default" class="logo">ZENKY <img class="logo" src="/images/logo.png"></a>
+        <a  href="./">Home</a>
+        
+        <span class="nav" id="notSignedin">
+          <a href="##">About</a>
+          <a href="##">Mobile Support</a>
+          <a href="##">Our Mission</a>
+          <a href="##">Contact Us</a>
+          <a href="/login.html">Log In</a>
+        </span>
+        <div id="signedin" style="display:none">
+          <a class="active" href="./evidenceTracker.html">Case Maker</a>
+          <a href="./Forum.html">Forum</a>
+          <a href="./Resources.html">Resources</a>
+          Loged In As: <span id="email"></span>
+          <button id="signOutButton" >Sign Out</button>
+        </div>
+      </nav>
+    </header>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-    <button type="submit" id="signUpButton">Sign Up</button>
-    <div id="error"></div> 
-    <button id="logInWithGoogle">Sign Up with Google</button>
-    <button id="logInWithGithub">Sign Up with Github</button>
-    <div id="email"></div>
-    <script type="module" src="/login.js"></script>
-  </body>
+    <!-- Body -->
+    <div class="main">
+
+        <!-- image -->
+        <div class="threeContainter">
+          <img src="https://acegif.com/wp-content/uploads/loading-45.gif" id="threeloader" style="display: block;">
+          <!--       src='./images/render.html'  -->
+          <iframe class="iframeThree" src="./images/render.html" frameborder='0'></iframe>
+          <script>
+            setTimeout(function() {
+              document.getElementsByClassName("iframeThree")[0].style.visibility = "visible"
+              document.getElementById("threeloader").style.display = "none"
+            }, 8000);
+          </script>
+        </div>
+
+
+        <!-- Login menu -->
+        <div class="login-menu">
+            <div class="container">
+                <h2>Sign Up</h2>
+                <div id="app"></div>
+                <div class="info">
+                    <label for="uname">Username</label><br>
+                    <input type="text" id="uname" name="uname" required><br>
+                </div>
+                <div class="info">
+                    <label for="psw">Password</label><br>
+                    <input type="password" id="psw" name="psw" required><br>
+                </div>
+
+                <div class="buttons">
+                    <button class="login-btn" type="submit" id="signUpButton">Sign up</button>
+
+                    <br>
+                    <div class="alt-login">
+                        <button class="btn" id="logInWithGoogle">Sign up with Google</button>
+                        <button class="btn" id="logInWithGithub">Sign up with Github</button>
+
+                    </div>
+
+                </div>
+
+                <br>
+                <hr>
+
+                <!-- Use later on for error handling -->
+                <div id="error"></div>
+                <div id="email"></div>
+
+                <!-- Option to go to signup page -->
+                <h5>Already have an account?</h5>
+
+                <button onclick="location.href='/login.html'" class="signup-btn" type="submit" name="signup" value="Signup">Log In</button>
+
+
+                <script type="module" src="/login.js"></script>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
 </html>
