@@ -22,10 +22,9 @@
         <a  href="./">Home</a>
         
         <span class="nav" id="notSignedin">
-          <a href="##">About</a>
-          <a href="##">Mobile Support</a>
-          <a href="##">Our Mission</a>
-          <a href="##">Contact Us</a>
+          <a href="./#why">About</a>
+          <a href="./Forum.html">Forum</a>
+          <a href="./Resources.html">Resources</a>
           <a href="/login.html">Log In</a>
         </span>
         <div id="signedin" style="display:none">
@@ -43,13 +42,13 @@
 
         <!-- image -->
         <div class="threeContainter">
-          <img src="https://acegif.com/wp-content/uploads/loading-45.gif" id="threeloader" style="display: block;">
+          <img src="./images/3dRender.png" id="threeloader" style="display: block;">
           <!--       src='./images/render.html'  -->
           <iframe class="iframeThree" src="./images/render.html" frameborder='0'></iframe>
           <script>
             setTimeout(function() {
-              document.getElementsByClassName("iframeThree")[0].style.visibility = "visible"
-              document.getElementById("threeloader").style.display = "none"
+              // document.getElementsByClassName("iframeThree")[0].style.visibility = "visible"
+              // document.getElementById("threeloader").style.display = "none"
             }, 8000);
           </script>
         </div>
@@ -61,7 +60,7 @@
                 <h2>Sign Up</h2>
                 <div id="app"></div>
                 <div class="info">
-                    <label for="uname">Username</label><br>
+                    <label for="uname">Email</label><br>
                     <input type="text" id="uname" name="uname" required><br>
                 </div>
                 <div class="info">

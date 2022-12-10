@@ -19,6 +19,7 @@ async function loadCases() {
     .eq('email', user.email)
   
   console.log(case_editors)
+
   case_editors.forEach((case_unit, index) => {
     const item = document.createElement("li");
     item.innerText = case_unit.title
@@ -30,8 +31,12 @@ async function loadCases() {
   });
 
   if(case_editors.length == 0){
+    document.getElementById("currentCase").style.display = "none"
+    document.getElementById("makeAFirstCase").style.display = "block"
     return
   }
+  document.getElementById("makeAFirstCase").style.display = "none"
+  document.getElementById("currentCase").style.display = "block"
   const replyForms = document.getElementsByClassName("caseItem");
     
   for (let i = 0; i < replyForms.length; i++){
@@ -371,6 +376,8 @@ async function changeDate(thingToChange) {
 
 // document.getElementById("refreshPosts").addEventListener('click', loadPosts);
 document.getElementById("createCase").addEventListener('click', createCase);
+document.getElementById("makeAFirstCase").addEventListener('click', createCase);
+
 
 document.getElementById("caseMediaUpload").addEventListener('click', uploadMedia);
 document.getElementById("testimonialUpdate").addEventListener('click', testimonialUpdate);

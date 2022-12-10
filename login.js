@@ -34,8 +34,10 @@ async function handleSignUp() {
     email: email,
     password: pass
   });
-
-  if (error == null){
+  if(error !== null){
+    document.getElementById("error").innerText = "There was an Error " + error
+    return
+  }else if (error == null){
     location.href='/checkEmail.html'
   }
 }
@@ -51,6 +53,10 @@ async function handleLogIn() {
     email: email,
     password: pass
   });
+  if(error !== null){
+    document.getElementById("error").innerText = "There was an Error " + error
+    return
+  }
 }
 
 async function signInWithGoogle() {

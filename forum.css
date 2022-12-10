@@ -18,7 +18,7 @@ body {
     background: linear-gradient(rgba(22, 23, 32, 1) 0%, rgba(30, 21, 57, 1) 143.69%) no-repeat fixed center;
     overflow-x: hidden;
     color: white;
-    font-family: proxima-nova, sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     font-style: normal;
 }
 
@@ -155,6 +155,7 @@ nav a {
 /*POST CREATOR CSS*/
 .post-creator {
     color: white;
+  
 }
 
 #closePost {
@@ -204,6 +205,7 @@ nav a {
     margin-bottom: 5%;
     padding: 2em 3em 3em;
   width: 650px;
+  position:relative;
 }
 
 p {
@@ -262,6 +264,7 @@ hr {
   text-align: left;
       padding: 1em;
     border-radius: 10px;
+  z-index:5;
 }
 #postTitle {
 
@@ -286,4 +289,30 @@ hr {
   justify-content: space-evenly;
   width: 100%;
   
+}
+
+.delButton {
+  background: #252539;
+  border: 1.3px solid #555282;
+  border-radius: 10px;
+  padding: 1em;
+  color: white;
+  position: absolute;
+  right: 3em;
+  top: 3em;
+}
+.delButton:hover {
+  background: #414162;
+}
+.delComButton {
+  background: #252539;
+  border: 1.3px solid #555282;
+  border-radius: 10px;
+  padding: 1em;
+  color: white;
+  margin: 5px 0;
+}
+
+.delComButton:hover {
+  background: #414162;
 }

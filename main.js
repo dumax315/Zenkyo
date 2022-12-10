@@ -24,10 +24,12 @@ function setUser(user) {
     document.getElementById("signedin").style.display = "none"
     document.getElementById("notSignedin").style.display = "inline"
     document.getElementById("email").innerText = "null"
+    document.getElementById("signOutButton").style.display = "none"
   }else{
     document.getElementById("email").innerText = user.email
     document.getElementById("signedin").style.display = "inline"
     document.getElementById("notSignedin").style.display = "none"
+    document.getElementById("signOutButton").style.display = "inline"
     // document.getElementById("signedinPoints").style.display = "inline"
     // document.getElementById("notSignedinPoints").style.display = "none"
   }
@@ -38,5 +40,7 @@ async function handleSignOut() {
   const { error } = await supabase.auth.signOut()
   // window.location.reload();
 }
+
+
 
 document.getElementById("signOutButton").addEventListener('click', handleSignOut);

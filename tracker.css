@@ -216,6 +216,18 @@ nav a {
 .caseEditHeaderContain:hover .caseEditHeader {
   background: #363655;
 }
+
+#currentCase{
+  display:none;
+}
+#makeAFirstCase {
+  width:100%;
+  text-align:center;
+  color:white;
+}
+#makeAFirstCase img {
+  height:20px;
+}
 @media screen and (min-width: 900px) {
   #mediaContainer img {
     width:48%;

@@ -12,9 +12,12 @@ body{
 
 .iframeThree, #threeloader{
   width:40vw;
-  height:33vw;
+  
 
 } 
+ .iframeThree{
+   height:33vw;
+ }
 .iframeThree{
   visibility: hidden;
 } 

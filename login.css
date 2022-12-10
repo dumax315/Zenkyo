@@ -85,8 +85,8 @@ nav a {
     position: absolute;
     background: #E7E4E9;
     border: 3px solid #6F57FD;
-    border-radius: 3px;
-    width: 80%;
+    border-radius: 10px;
+    width: calc(80% - 10px);
     height: 6%;
 }
 
@@ -198,6 +198,21 @@ border-radius: 5px;
 .btn{
   padding-left:40px;
   position:relative;
+}
+#error {
+  color:red;
+}
+.login-btn:hover {
+  background: #3C3560;
+}
+.alt-login button:hover {
+  background: #3C3560;
+}
+.signup-btn:hover {
+  background: #3C3560;
+}
+button {
+  font-family: 'Proxima Nova', sans-serif;
 }
 @media screen and (max-width: 650px) {
   .threeContainter {
