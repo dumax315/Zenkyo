@@ -78,13 +78,16 @@ nav a {
 }
 
 .main {
-    height: 70%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20%;
-    flex-direction: column;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20%;
+  flex-direction: column;
+  max-width: 1239px;
+  
 }
 
 
