@@ -47,7 +47,7 @@ nav a {
 .main {
   margin-top:2em;
   display:flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .login-menu {
@@ -223,4 +223,7 @@ button {
   }
 }
 
-
+#threeloader {
+  width: 56vw;
+  margin-top: 3em;
+}

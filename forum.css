@@ -316,3 +316,6 @@ hr {
 .delComButton:hover {
   background: #414162;
 }
+.searchForm{
+  display:inline;
+}

@@ -9,7 +9,8 @@ async function loadCases() {
   
   const { data: { user } } = await supabase.auth.getUser()
   if(user == null) {
-    alert("please log in acces the case creator")
+    // alert("please log in acces the case creator")
+    window.location.href = "./signup.html";
     return;
   }
   const postBody = document.getElementById("cases");
@@ -144,7 +145,7 @@ async function openCase(caseToOpen) {
     const item = document.createElement("li");
     item.innerText = testimonialWriter
     item.classList = "caseEditorsItem"
-    item.style.background = colors[index%3]
+    item.style.background = colors[index%5]
     // item.uuid = case_editors.uuid
     document.getElementById("caseEditors").appendChild(item);
     
@@ -155,7 +156,7 @@ async function openCase(caseToOpen) {
     }
     let e = index
     item2.addEventListener('click', function() {viewTest(e)});
-    item2.style.background = colors[index%3]
+    item2.style.background = colors[index%5]
     // item.uuid = case_editors.uuid
     document.getElementById("caseEditorsImages").appendChild(item2);
     

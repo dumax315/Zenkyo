@@ -24,6 +24,7 @@
           <a class="Features" href="#contactUsBlock">Contact Us</a>
           <a class="Features" href="./Forum.html">Forum</a>
           <a class="Features" href="./Resources.html">Resources</a>
+          <a class="Features" href="./quizSelectionPage.html">Quizs</a>
           <a class="Features" href="/signup.html">Sign Up</a>
           <a class="Features" href="/login.html">Log In</a>
         </span>
@@ -31,13 +32,24 @@
           <a class="Features" href="./evidenceTracker.html">Case Maker</a>
           <a class="Features" href="./Forum.html">Forum</a>
           <a class="Features" href="./Resources.html">Resources</a>
+          <a class="Features" href="./quizSelectionPage.html">Quizs</a>
           <span id="email" style="display:none;"></span>
-          <button id="signOutButton" >Sign Out</button>
+          
         </div>
     </div>
-
+    <button id="signOutButton" >Sign Out</button>
     <div class="bruh"></div>
-    <!--<iframe src='https://my.spline.design/untitled-5cdad7cf90553afc195cfa522fdf141c/' frameborder='0' width='100%' height='100%'></iframe>-->
+    <div class="threeContainter">
+          <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" id="threeloader" style="display: block;">
+          <!--       src='./images/render.html'  -->
+          <iframe class="iframeThree" src="./images/render.html" frameborder='0'></iframe>
+          <script>
+            setTimeout(function() {
+              document.getElementsByClassName("iframeThree")[0].style.visibility = "visible"
+              document.getElementById("threeloader").style.display = "none"
+            }, 4000);
+          </script>
+        </div>
 <div id="Box1">
     <div class="textBox">
         <h2 class="mText">Find your peace and <br>communication with</h2>
@@ -48,10 +60,10 @@
 
 
 <div id="bPosition1">
-    <form class="bLineUp">
+    <div class="bLineUp">
         <button class="Button" id="login" onclick="location.href='/login.html'">Login</button>
        <button class="Button" id="register" onclick="location.href='/signup.html'">Register</button>
-    </form>
+    </div>
 </div>
 
 
@@ -72,9 +84,10 @@
 </div>
 
 
-<img id="illustration" src="/imgs/002_illustration.png">
+<img id="illustration" src="/images/ev-track.webp">
 
 <div id="Box3">
+  <img src="./images/mob-support.webp" class="mobImage">
     <div class="textBox">
         <h2 class="mText">We’ll offer mobile support soon. Check it out on the side!</h2>
         <h4 class="subText">Mobile development is already underway, but you can always access ZENKYO online through our online database. But feel free to get a sens of how the mobile app will function with our 3D rendition to your left.</h4>

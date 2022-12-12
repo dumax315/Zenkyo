@@ -1,0 +1,255 @@
+@import "https://fonts.googleapis.com/css2?family=Manrope&display=swap";
+@import "https://use.typekit.net/csp0oom.css";
+@import "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap";
+
+html {
+    height: 100%;
+}
+
+#root {
+    width: 100%;
+}
+
+header {
+    width: 100%
+}
+
+body {
+    height: auto;
+    margin: 0;
+    background-blend-mode: multiply;
+    background: linear-gradient(rgba(22, 23, 32, 1) 0%, rgba(30, 21, 57, 1) 143.69%) no-repeat fixed center;
+    overflow-x: hidden;
+    color: white;
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+}
+
+nav {
+    font-family: 'Manrope', serif;
+    font-size: 20px;
+    justify-content: space-between;
+    margin-top: calc(3% + 2vh - 1vw);
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    font-weight: 300;
+    color: #7364BF;
+    text-decoration: none;
+    margin-left: 3.3vw;
+    cursor: pointer;
+}
+
+#logo {
+    position: absolute;
+    display: flex;
+    width: 7%;
+    top: .5%;
+    margin-top: 3.1vh;
+    left: 15vw
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20%;
+    flex-direction: column;
+}
+
+.info {
+    height: 500px;
+    width: 30%;
+
+    background: #252539;
+    box-shadow: 0 17px 37px -23px #331BA9;
+    border-radius: 10px;
+    line-height: 30px;
+    margin-top: 10em;
+
+    display: flex;
+    min-width: 500px;
+    flex-direction: column;
+}
+
+
+.container {
+    margin: 3em;
+    align-self: center;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 40px;
+
+    letter-spacing: -0.015em;
+}
+
+p {
+    color: #9497A1;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+}
+
+.choices button {
+    background: #7364BF;
+    border-radius: 3px;
+    border-color: #7364BF;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    color: white;
+
+    margin-bottom: 2em;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+
+
+    letter-spacing: -0.015em;
+}
+
+a {
+    margin-top: 1em;
+    align-self: center;
+    color: #9497A1;
+    text-underline: none;
+}
+
+
+/*OTHER STUFF*/
+.login-menu {
+    position: relative;
+    width: 35%;
+    height: 750px;
+
+    background: #252539;
+    box-shadow: 0 17px 37px -23px #331BA9;
+    border-radius: 10px;
+    font-family: 'Proxima Nova', sans-serif;
+    line-height: 30px;
+}
+
+
+.login-menu h2 {
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+.login-menu label {
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.login-menu input {
+    position: absolute;
+    background: #E7E4E9;
+    border: 3px solid #6F57FD;
+    border-radius: 3px;
+    width: 80%;
+    height: 6%;
+}
+
+.login-menu h5 {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #9497A1;
+}
+
+.info {
+    margin-bottom: 40px;
+}
+
+.login-btn {
+    background: #7364BF;
+    border-radius: 3px;
+    border-color: #7364BF;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 80%;
+    color: white;
+}
+
+.buttons {
+    align-self: center;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.signup-btn {
+    color: white;
+    background: #252539;
+    border: 3px solid #7364BF;
+    border-radius: 3px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 80%;
+    height: 7%;
+}
+
+.alt-login {
+    align-content: center;
+    margin-top: 7%;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+.alt-login button {
+    background: #7364BF;
+    border-radius: 3px;
+    border-color: #7364BF;
+    text-align: center;
+    padding: 10px;
+    gap: 10px;
+    width: 30%;
+    height: 10%;
+    color: white;
+}
+
+hr {
+    width: 100%;
+    color: #555282;
+    align-self: center;
+}
+
+.caseEditorsImagesItem {
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+    position: relative;
+}
+.choices button:hover {
+  background: #3D3564;
+}
+@media screen and (max-width: 650px) {
+    .threeContainter {
+        display: none;
+    }
+
+    .login-menu {
+        width: 90%;
+    }
+  .info {
+    width:100%;
+  }
+}

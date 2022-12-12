@@ -26,12 +26,14 @@
             <a href="./#why">About</a>
             <a href="./Forum.html">Forum</a>
             <a href="./Resources.html">Resources</a>
+            <a href="./quizSelectionPage.html">Quizs</a>
             <a href="/signup.html">sign up</a>
             <a href="/login.html">log in</a>
           </span>
           <div id="signedin" style="display:none">
             <a  href="./evidenceTracker.html">Case Maker</a>
             <a class="active" href="./Forum.html">Forum</a>
+            <a href="./quizSelectionPage.html">Quizs</a>
             <a href="./Resources.html">Resources</a>
             <span id="email"></span>
             
@@ -49,9 +51,11 @@
     <button id="refreshPosts">Refresh Posts</button>
     
     <button id="createPost">+ Create Post</button>
-    <label>
-      <input id="searchBar" class="search-bar" type="text" placeholder="Type here to search...">
-    </label>
+    <form class="searchForm" action="/Forum.html" method="get">
+      <label>
+        <input id="searchBar" class="search-bar" name="searchString" type="text" placeholder="Type here to search...">
+      </label>
+    </form>
   </div>
     <div id="postCreator" style="display: none;">
       <button id="closePost">X</button>

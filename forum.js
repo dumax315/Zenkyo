@@ -70,12 +70,30 @@ async function loadPosts() {
   let start = document.getElementById("start").value;
   console.log(start)
   postBody.innerHTML = "";
-  let { data: forum, error } = await supabase
-    .from('forum')
-    .select('*')
-    .order('created_at', { ascending: false })
-    .range(start-1, start+9)
 
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+  // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+  let value = params.searchString; // "some_value"\
+  let { data: forumget, error } = await supabase
+      .from('forum')
+      .select('*')
+      .order('created_at', { ascending: false })
+      .range(start-1, start+9)
+  let forum = forumget
+  if(value!=null){
+    
+    let string = "'" + value.split("+").join(' | ')+"'"
+    console.log(string)
+    let { data: forumget, error } = await supabase
+      .from('forum')
+      .select()
+      .textSearch('title', string)
+      // .order('created_at', { ascending: false })
+    forum = forumget
+  }
+  
   console.log(forum)
   forum.forEach(element => {
     const containerDiv = document.createElement("div");
