@@ -319,3 +319,6 @@ hr {
 .searchForm{
   display:inline;
 }
+.top-bar button:hover {
+  background: #555282 !important;
+}
